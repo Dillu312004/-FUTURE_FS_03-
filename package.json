@@ -1,20 +1,24 @@
 {
-  "name": "professional-portfolio",
+  "name": "portfolio-server",
   "version": "1.0.0",
-  "description": "A modern professional portfolio website with React frontend and Node.js backend",
-  "main": "server/index.js",
+  "description": "Backend server for professional portfolio",
+  "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "cd server && npm run dev",
-    "client": "cd client && npm start",
-    "build": "cd client && npm run build",
-    "install-all": "npm install && cd server && npm install && cd ../client && npm install",
-    "start": "cd server && npm start"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
-  "keywords": ["portfolio", "react", "nodejs", "professional", "developer"],
-  "author": "Your Name",
-  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "nodemailer": "^6.9.7",
+    "express-rate-limit": "^7.1.5",
+    "helmet": "^7.1.0",
+    "compression": "^1.7.4",
+    "morgan": "^1.10.0"
+  },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "nodemon": "^3.0.2"
   }
 } 
